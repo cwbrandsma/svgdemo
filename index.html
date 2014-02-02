@@ -1,0 +1,116 @@
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+
+	<style>
+
+	body {
+		text-rendering: optimizeLegibility;
+		margin: 0px;
+	}
+
+	svg {
+		background-color: rgba(166, 178, 204, 1.000);
+	}
+
+	svg circle, svg ellipse {
+		fill: rgba(225, 152, 53, 1.000);
+		-webkit-svg-shadow: -2px 1px 4px rgba(0, 0, 0, 0.6);
+	}
+
+	svg circle { stroke: green;stroke-width:2}
+
+	svg rect {
+		fill: rgba(255,255,225, 1.000);
+	}
+
+	svg text {
+		fill: rgba(255, 255, 255, 0.9);
+		font-weight: normal;
+		font-family: sans-serif;
+		font-size: 10pt;
+		text-anchor: middle;
+		alignment-baseline: central;
+	}
+
+	svg .title {
+		font-family: sans-serif;
+		font-weight: bold;
+		font-size: 32pt;
+		letter-spacing: -0.05em;
+		text-anchor: start;
+		fill: rgba(255, 255, 255, 0.9);
+	}
+
+	svg div.labelDiv {
+		padding: 0px;
+		margin: 0px;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	svg .label {
+		font-weight: normal;
+		font-family: sans-serif;
+		font-size: 10pt;
+		color: rgba(255, 255, 255, 0.9);
+	}
+	
+	</style>
+</head>
+
+<body>
+	<h1>Playing with Shapes</h1>
+	<p>
+		<a href="shapereuse.html">Shape Reuse</a>
+		<a href="text.html">Text</a>
+	</p>
+	<svg height="800" width="800">
+		<!-- Circle
+			r  = radius
+			cx = center X
+			cy = center Y
+		-->
+		<circle cx="600" cy="600" r="100"></circle>
+
+		<!-- Ellipse
+			rx = radius X
+			ry = radius Y
+			cx = center X
+			cy = center Y
+		-->
+		<ellipse cx="60" cy="600" rx="50" ry="25"/>
+
+		<!-- Line
+			x1 = Point 1 X
+			y1 = Point 1 Y
+			x2 = Point 2 X
+			y2 = Point 2 Y
+		-->
+		<line x1="400" y1="100"
+          x2="500" y2="20"
+          stroke="black"
+          stroke-width="2"/>
+
+		<!-- Rect
+			x1 = Point 1 X
+			y1 = Point 1 Y
+			x2 = Point 2 X
+			y2 = Point 2 Y
+		-->
+		<rect x="50" y="350" height="100" width="300" />
+
+
+	 	<!-- g  = group element, container element, can move, color, etc inner elements as a group
+		-->
+		<g transform="translate(40,40)">
+			<!-- polygon
+				points = x1,y1 x2,y2 x3,y3 ...
+			-->
+			<polygon points="60,20 100,40 100,80 60,100 20,80 20,40"/>
+		</g>
+	</svg>
+
+</body>
+</html>

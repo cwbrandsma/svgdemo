@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- from: http://www.svgbasics.com/defs.html -->
+</head>
+<body>
+	<h1>Shape Reuse</h1>
+	<p>
+		<a href="index.html">Main Page</a>
+		<a href="text.html">Text</a>
+	</p>
+	<svg viewBox = "0 0 1000 1000" version = "1.1">
+		<defs>
+				<!-- A circle of radius 200 -->
+				<circle id="s1" cx="50" cy="50" r="50" fill="yellow" stroke="black" stroke-width="3"/>
+				<!-- An ellipse (rx=200,ry=150) -->
+				<ellipse id="s2" cx="200" cy="150" rx="50" ry="100" fill="salmon" stroke="black" stroke-width="3"/>
+		</defs>
+		<use x = "50" y = "50" xlink:href = "#s1"/>
+		<use x = "100" y = "650" xlink:href = "#s2"/>
+		<use x = "100" y = "1050" xlink:href = "#s1"/>
+	</svg>
+</body>
+</html>
