@@ -1,3 +1,10 @@
+/*--------------------------------------------------------------------------*/
+/*           Copyright (c) 2014 by Chris Brandsma                           */
+/*                           All Rights Reserved.                           */
+/*           License: MIT                                                   */
+/* Show all planets and relative sizes.                                     */
+/* Purpose: allow playing with svg.viewbox to show zooming                  */
+/*--------------------------------------------------------------------------*/
 <html>
 <head>
 	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
@@ -84,8 +91,12 @@
 		<a href="animate.html">Animation</a>
 	</p>
 
-	<input id="viewBoxEdit" type="text" value="0 -1000 10000 1000" style="width:300px"/>
-	<button id="viewBoxBtn" type="button">Update</button>
+	<p>
+		<label>View Box</label>
+		<input id="viewBoxEdit" type="text" style="width:300px"/>
+		<button id="viewBoxBtn" type="button">Update</button>
+		<label>Try: 0 0 1000 1000</label>
+	</p>
 
 <svg id="svg1" width="2000" height="1000" viewBox="0 -1000 10000 1000">
 	<circle cx="85.68248232305542" cy="364.3175176769446" r="35.682482323055424" class="mercury"></circle>
@@ -144,6 +155,7 @@
 	var vbEdit = document.getElementById("viewBoxEdit");
 	var vbBtn =  document.getElementById("viewBoxBtn");
 	var svg =    document.getElementById("svg1");
+	vbEdit.value = svg.getAttribute("viewBox");
 
 	vbBtn.addEventListener("click", function(evt){
 		evt.preventDefault();
